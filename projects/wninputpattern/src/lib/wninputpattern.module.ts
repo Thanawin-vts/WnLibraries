@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { WninputpatternComponent } from './wninputpattern.component';
-import { WninputpatternDirective } from './wninputpattern.directive';
+import { NumberDirective } from './directives/number.directive';
+import { ThaiDirective } from './directives/thai.directive';
+import { EnglishDirective } from './directives/english.directive';
 
 
 
 @NgModule({
   declarations: [
     WninputpatternComponent,
-    WninputpatternDirective
+    NumberDirective,
+    ThaiDirective,
+    EnglishDirective
   ],
   imports: [
   ],
   exports: [
     WninputpatternComponent,
-    WninputpatternDirective
+    NumberDirective,
+    ThaiDirective,
+    EnglishDirective
   ]
 })
 export class WninputpatternModule { }

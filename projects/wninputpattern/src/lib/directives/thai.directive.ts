@@ -7,25 +7,17 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[Number]',
+  selector: '[Thai]',
 })
-export class WninputpatternDirective {
+export class ThaiDirective {
   constructor() {}
 
-  @Input('specialNumber') params: string = '';
+  @Input('specialChar') params: string = '';
   @Output() validater = new EventEmitter();
-  regEx = new RegExp(/^[0-9]*$/g);
-
+  regEx = new RegExp(/^[\u0E00-\u0E7F().-\s]*$/);
   @HostListener('keypress', ['$event']) onKeyPress(event: any) {
     const e = <KeyboardEvent>event;
-    console.log(e.key);
-    
-    if (e.key === 'Tab' || e.key === 'TAB') {
-      return;
-    }
-
     const ch = String.fromCharCode(e.keyCode);
-
     const regEx = new RegExp(this.regEx);
     if (!regEx.test(ch)) {
       e.preventDefault();
