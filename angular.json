@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "wndatamapper": {
+      "projectType": "library",
+      "root": "projects/wndatamapper",
+      "sourceRoot": "projects/wndatamapper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/wndatamapper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wndatamapper/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/wndatamapper/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/wndatamapper/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
