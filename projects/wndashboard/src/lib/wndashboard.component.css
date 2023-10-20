@@ -1,0 +1,8 @@
+.custom-card {
+  width: 300px;
+}
+.custom-card-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

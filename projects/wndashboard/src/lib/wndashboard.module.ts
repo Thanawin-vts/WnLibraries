@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { WndashboardComponent } from './wndashboard.component';
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -8,9 +10,12 @@ import { WndashboardComponent } from './wndashboard.component';
     WndashboardComponent
   ],
   imports: [
+    MatCardModule,
+    CommonModule
   ],
   exports: [
     WndashboardComponent
-  ]
+  ],
+  providers: []
 })
 export class WndashboardModule { }

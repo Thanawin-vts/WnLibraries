@@ -1,0 +1,11 @@
+<div class="custom-card-group">
+
+  <mat-card class="custom-card" *ngFor="let item of data">
+      <mat-card-header>
+          <mat-card-title>{{ item.dataHeader }} - {{ item.totalCount }} </mat-card-title>
+              <mat-card-subtitle *ngFor="let subitem of item.subtitle">{{ subitem.subHeader }} - {{ subitem.count }}</mat-card-subtitle>
+          </mat-card-header>
+          <br>
+  </mat-card>
+
+</div>
