@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'datemapper',
+  name: 'datamapper',
 })
 export class WndatamapperPipe implements PipeTransform {
   transform(value: any, dataList: any, keyIn: string, keyOut: string): unknown {
