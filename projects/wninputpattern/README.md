@@ -1,24 +1,58 @@
 # Wninputpattern
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Simple directive for your input pattern.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project wninputpattern` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project wninputpattern`.
-> Note: Don't forget to add `--project wninputpattern` or else it will be added to the default project in your `angular.json` file. 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available Directives](#available-directives)
 
-## Build
+## Installation
 
-Run `ng build wninputpattern` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  npm i wninputpattern
+```
 
-## Publishing
+## Usage
+To use WninputpatternDirective in your Angular project, import the WninputpatternModule into your module and add it to your template.For example, to use the `Number` directive:
 
-After building your library with `ng build wninputpattern`, go to the dist folder `cd dist/wninputpattern` and run `npm publish`.
+```bash
+    import { WninputpatternModule } from 'wninputpattern';
 
-## Running unit tests
+    @NgModule({
+        // ...
+        imports: [
+            // ...
+            WninputpatternModule,
+        ],
+        // ...
+    })
+export class AppModule { }
+```
 
-Run `ng test wninputpattern` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your component's template:
 
-## Further help
+```bash
+  <input Number/>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Available Directives
+
+#### 1. `Number`
+Directive to make input field will only accept numeric values.
+
+#### 2. `Thai`
+Directive to make input field will only accept Thai Alphabet.
+
+#### 3. `English`
+Directive to make input field will only accept English Alphabet.
+
+#### 4. `Special`
+Directive to make input field will only don't accept some special characters (accept ; , . () ' : - / + # @ & _ [ ] % *).
+
+#### 5. `SpecialAll`
+Directive to make input field will only don't accept all special characters.
+
+#### 6. `Email`
+Directive to make input field will only accept email pattern.
