@@ -38,18 +38,18 @@ In your component's template:
   <p>{{ data | datamapper : arg1 : arg2 : arg3 }}</p>
 ```
 `arg1`
-Your data list
+Your data list<br>
 `arg2`
-Key value of input
+Key value of input<br>
 `arg3`
-Key value of output
+Key value of output<br>
 
 ## Example
 
 In your component's template:
 
 ```html
-  <p>{{ "TH" | datamapper : list : "code" : "name"  }}</p>
+<p>{{ "TH" | datamapper : list : "code" : "name"  }}</p>
 ```
 In your component's script:
 
