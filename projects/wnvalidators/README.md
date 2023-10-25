@@ -1,24 +1,41 @@
 # Wnvalidators
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Simple service for your formgroup and formcontrol.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project wnvalidators` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project wnvalidators`.
-> Note: Don't forget to add `--project wnvalidators` or else it will be added to the default project in your `angular.json` file. 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available Validators](#available-validators)
 
-## Build
+## Installation
 
-Run `ng build wnvalidators` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm i wninputcontrol
+```
 
-## Publishing
+## Usage
+To use Wnvalidators in your Angular project, import the Validators contained in Wnvalidators into your component.ts and add it to your formControl. For example, to use the `CheckBoxValidator` Validator:
 
-After building your library with `ng build wnvalidators`, go to the dist folder `cd dist/wnvalidators` and run `npm publish`.
+```javascript
+import { CheckBoxValidator } from 'wninputcontrol';
+// ...
+    this.formgroup.get('formControlName')?.setValidators(CheckBoxValidator)
+// ...
+```
 
-## Running unit tests
+If don't have style or anything for invalid form, you can `console.log` to view errors.
 
-Run `ng test wnvalidators` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Available Validators
 
-## Further help
+#### 1. `CheckBoxValidator`
+Validator to check the checkbox is selected or not.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### 2. `ValidatorsCitizenId`
+Validator to check the citizen ID number with 13 digits and some calculate the citizen ID number.
+
+#### 3. `ValidatorsPassport`
+Validator to check passport number using 9 characters.
+
+#### 4. `ValidatorsTaxId`
+Validator to check the tax number with 10 or 13 digits.
