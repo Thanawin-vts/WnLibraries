@@ -1,24 +1,76 @@
 # Wndatamapper
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Simple pipe for match and transformation data.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project wndatamapper` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project wndatamapper`.
-> Note: Don't forget to add `--project wndatamapper` or else it will be added to the default project in your `angular.json` file. 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example](#example)
 
-## Build
+## Installation
 
-Run `ng build wndatamapper` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm i wndatamapper
+```
 
-## Publishing
+## Usage
+To use WndatamapperPipe in your Angular project, import the WndatamapperModule into your module and add it to your template.For example, to use the `datamapper` pipe:
 
-After building your library with `ng build wndatamapper`, go to the dist folder `cd dist/wndatamapper` and run `npm publish`.
+```javascript
+import { WndatamapperModule } from 'wndatamapper';
 
-## Running unit tests
+    @NgModule({
+        // ...
+        imports: [
+            // ...
+            WndatamapperModule,
+            // ...
+        ],
+        // ...
+    })
+export class AppModule { }
+```
 
-Run `ng test wndatamapper` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your component's template:
 
-## Further help
+```html
+  <p>{{ data | datamapper : arg1 : arg2 : arg3 }}</p>
+```
+`arg1`
+Your data list
+`arg2`
+Key value of input
+`arg3`
+Key value of output
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Example
+
+In your component's template:
+
+```html
+  <p>{{ "TH" | datamapper : list : "code" : "name"  }}</p>
+```
+In your component's script:
+
+```javascript
+list = [
+    {
+        code: 'TH',
+        name: 'Thailand',
+    },
+    {
+        code: 'JP',
+        name: 'Japan',
+    },
+    {
+        code: 'UK',
+        name: 'United Kingdom',
+    },
+    {
+        code: 'UK',
+        name: 'United Kingdom',
+    },
+];
+// Pipe Output : Thailand
+```
