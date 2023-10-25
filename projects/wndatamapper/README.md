@@ -35,7 +35,7 @@ export class AppModule { }
 In your component's template:
 
 ```html
-  <p>{{ data | datamapper : arg1 : arg2 : arg3 }}</p>
+<p>{{ data | datamapper : arg1 : arg2 : arg3 }}</p>
 ```
 `arg1`
 Your data list<br>
