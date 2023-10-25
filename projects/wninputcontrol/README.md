@@ -1,24 +1,49 @@
 # Wninputcontrol
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Simple service for your formgroup and formcontrol.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project wninputcontrol` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project wninputcontrol`.
-> Note: Don't forget to add `--project wninputcontrol` or else it will be added to the default project in your `angular.json` file. 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available Functions](#available-functions)
 
-## Build
+## Installation
 
-Run `ng build wninputcontrol` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm i wninputcontrol
+```
 
-## Publishing
+## Usage
+To use WninputcontrolService in your Angular project, import the WninputcontrolService into your component.ts and add it to your function. For example, to use the `disable` function:
 
-After building your library with `ng build wninputcontrol`, go to the dist folder `cd dist/wninputcontrol` and run `npm publish`.
+```javascript
+import { WninputcontrolService } from 'wninputcontrol';
+// ...
+constructor(private fb: FormBuilder, private ws: WninputcontrolService)
+// ...
+    this.ws.disableControl(arg1, arg2, arg3)
+// ...
+```
 
-## Running unit tests
+`arg1`
+Your formgroup which you want to access formContol<br>
+`arg2`
+List of formControl's name that you want to disable<br>
+`arg3`
+List of formControl's name that you don't want to disable<br>
 
-Run `ng test wninputcontrol` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Available Functions
+Every function takes the same parameters.
 
-## Further help
+#### 1. `clearValidatorControl`
+Functions to clear all validators in formControl.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### 2. `resetControl`
+Functions to reset value in formControl.
+
+#### 3. `enableControl`
+Functions to enable the formControl.
+
+#### 4. `disableControl`
+Functions to disable the formControl.
