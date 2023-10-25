@@ -1,6 +1,6 @@
 {
   "name": "wndatamapper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/core": "^16.1.0"
@@ -8,5 +8,14 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "wn",
+    "angular",
+    "find",
+    "match",
+    "array",
+    "pipe",
+    "typescript"
+  ]
 }
